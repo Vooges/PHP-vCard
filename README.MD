@@ -2,10 +2,6 @@
 
 This library can create a .vcf file or a string representation of a .vcf file with one or more vCards in it. All vCards are generated as a version 4.0 vCard.
 
-## Installation
-
-`composer install jessevooges/php-vcard`
-
 ## Usage
     <?php
 
