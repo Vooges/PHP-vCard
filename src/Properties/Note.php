@@ -5,7 +5,7 @@ namespace JesseVooges\PHPvCard\Properties;
 use JesseVooges\PHPvCard\Properties\Property;
 use JesseVooges\PHPvCard\Properties\Interfaces\PropertyInterface;
 
-final class Logo extends Property implements PropertyInterface
+final class Note extends Property implements PropertyInterface
 {
     private string $note;
 
