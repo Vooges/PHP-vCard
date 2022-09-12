@@ -5,7 +5,7 @@ namespace JesseVooges\PHPvCard\Properties;
 use DateTimeImmutable;
 use DateTimeInterface;
 use JesseVooges\PHPvCard\Exceptions\InvalidDateException;
-use JesseVooges\PHPvCard\Exceptions\UnsupportedTypeException;
+use InvalidArgumentException;
 use JesseVooges\PHPvCard\Properties\Property;
 use JesseVooges\PHPvCard\Properties\Interfaces\PropertyInterface;
 
@@ -20,7 +20,8 @@ final class Anniversary extends Property implements PropertyInterface
      */
     public function __construct(mixed $anniversary)
     {
-        if(is_string($anniversary)){
+        if(is_string($anniversary))
+        {
             $anniversary = new DateTimeImmutable($anniversary);
 
             if(!$anniversary){
@@ -28,14 +29,17 @@ final class Anniversary extends Property implements PropertyInterface
             }
         }
 
-        if($anniversary instanceof DateTimeInterface){
+        if($anniversary instanceof DateTimeInterface)
+        {
             $this->anniversary = $anniversary->format('Ymd');
-        } else {
-            throw new UnsupportedTypeException('Only strings and DateTimeInterface objects are supported');
+        } 
+        else 
+        {
+            throw new InvalidArgumentException('Only strings and DateTimeInterface objects are supported');
         }
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'ANNIVERSARY:' . $this->anniversary;
     }

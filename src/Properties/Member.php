@@ -14,7 +14,7 @@
 //         $this->member = $member;
 //     }
 
-//     public function parse(): string
+//     public function parse() : string
 //     {
 //         return 'MEMBER:' . $this->member;
 //     }

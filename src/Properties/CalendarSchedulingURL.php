@@ -20,7 +20,7 @@ final class CalendarSchedulingURL extends Property implements PropertyInterface
         $this->url = $url;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'CALADRURI:' . $this->url;
     }

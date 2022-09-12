@@ -19,7 +19,7 @@ final class Role extends Property implements PropertyInterface
         $this->role = $role;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'ROLE:' . $this->role;
     }

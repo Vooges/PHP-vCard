@@ -19,7 +19,7 @@ final class CalendarURL extends Property implements PropertyInterface
         $this->url = $url;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'CALURI:TYPE=' . $this->type . ':' . $this->url;
     }

@@ -14,7 +14,7 @@
 //         $this->timezone = $timezone;
 //     }
 
-//     public function parse(): string
+//     public function parse() : string
 //     {
 //         return 'TZ:' . $this->timezone;
 //     }

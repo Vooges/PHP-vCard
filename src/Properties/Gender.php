@@ -19,7 +19,7 @@ final class Gender extends Property implements PropertyInterface
         $this->gender = $gender;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'GENDER:' . $this->gender;
     }

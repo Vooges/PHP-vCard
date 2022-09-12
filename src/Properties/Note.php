@@ -19,8 +19,11 @@ final class Logo extends Property implements PropertyInterface
         $this->note = $note;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
+        /**
+         * Notes SHOULD be folded every 75 octets according to the vCard 4.0 spec.
+         */
         return 'NOTE:' . $this->fold($this->note);
     }
 }

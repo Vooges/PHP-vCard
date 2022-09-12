@@ -90,3 +90,7 @@ This library can create a .vcf file or a string representation of a .vcf file wi
 - [x] FBURL: Calendar Busy Time of the object
 - [x] CALADURI: Calendar Request of the object
 - [x] CALURI: Calendar Link of the object
+
+## Testing
+
+Unit tests can be run in development by using `./vendor/bin/phpunit --verbose tests`

@@ -22,7 +22,7 @@ final class Telephone extends Property implements PropertyInterface
         $this->phoneType = $phoneType;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'TEL;TYPE='. $this->phoneType . ':' . $this->number;
     }

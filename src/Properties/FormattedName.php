@@ -19,7 +19,7 @@ final class FormattedName extends Property implements PropertyInterface
         $this->name = $name;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'FN:' . $this->name;
     }

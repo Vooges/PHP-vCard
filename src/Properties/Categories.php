@@ -15,7 +15,7 @@ final class Categories extends Property implements PropertyInterface
      * 
      * @param String|String[] $categories The categories the person belongs to.
      * 
-     * @throws UnsupportedTypeException
+     * @throws InvalidArgumentException
      */
     public function __construct(mixed $categories)
     {
@@ -24,7 +24,7 @@ final class Categories extends Property implements PropertyInterface
         $this->categories = gettype($categories) === 'array' ? $categories : [$categories];
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'CATEGORIES:' . implode(',', $this->categories);
     }

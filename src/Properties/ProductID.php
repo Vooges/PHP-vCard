@@ -7,8 +7,8 @@ use JesseVooges\PHPvCard\Properties\Interfaces\PropertyInterface;
 
 final class ProductID extends Property implements PropertyInterface
 {
-    public function parse(): string
+    public function parse() : string
     {
-        return 'PRODID:JesseVooges//PHPvCard';
+        return 'PRODID:JesseVooges/PHPvCard';
     }
 }

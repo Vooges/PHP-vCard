@@ -16,7 +16,7 @@ final class Location extends Property implements PropertyInterface
         $this->longitude = $longitude;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'GEO:geo:' . $this->latitude . ',' . $this->longitude;
     }

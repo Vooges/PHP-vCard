@@ -19,7 +19,7 @@ final class Title extends Property implements PropertyInterface
         $this->title = $title;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'TITLE:' . $this->title;
     }

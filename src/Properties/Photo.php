@@ -22,7 +22,7 @@ final class Photo extends Property implements PropertyInterface
         $this->fileType = $fileType;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'PHOTO:MEDIATYPE=image/'. $this->fileType . ':' . $this->url;
     }

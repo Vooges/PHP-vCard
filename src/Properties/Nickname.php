@@ -14,7 +14,7 @@ final class Nickname extends Property implements PropertyInterface
      * Represents the nickname property on a vCard.
      * 
      * @param String|String[] $nicknames The person's nickname(s).
-     * @throws UnsupportedTypeException
+     * @throws InvalidArgumentException
      */
     public function __construct(mixed $nicknames)
     {
@@ -23,7 +23,7 @@ final class Nickname extends Property implements PropertyInterface
         $this->categories = gettype($nicknames) === 'array' ? $nicknames : [$nicknames];
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'NICKNAME:' . implode(',', $this->nicknames);
     }

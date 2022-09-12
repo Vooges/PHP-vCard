@@ -1,0 +1,7 @@
+name: php-vcard
+recipe: lamp
+config:
+  webroot: .
+  php: '8.0'
+  via: apache
+  composer_version: '2.2.6'

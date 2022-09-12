@@ -20,7 +20,7 @@ final class Email extends Property implements PropertyInterface
         $this->email = $email;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'EMAIL:' . $this->email;
     }

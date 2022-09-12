@@ -26,7 +26,7 @@ final class Organisation extends Property implements PropertyInterface
         }
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         $string = 'ORG:' . $this->organisation;
 

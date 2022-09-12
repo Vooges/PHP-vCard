@@ -22,7 +22,7 @@ final class Name extends Property implements PropertyInterface
         $this->firstname = $firstname;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'N:' . $this->lastname . ';' . $this->firstname .';;';
     }

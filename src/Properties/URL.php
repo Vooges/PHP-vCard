@@ -19,7 +19,7 @@ final class URL extends Property implements PropertyInterface
         $this->url = $url;
     }
 
-    public function parse(): string
+    public function parse() : string
     {
         return 'URL:' . $this->url;
     }

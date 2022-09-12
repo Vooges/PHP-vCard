@@ -6,7 +6,7 @@ class Property
 {
     protected function unescape(string $string): string
     {
-        return str_replace('\\n', PHP_EOL, $string);
+        return str_replace('\\n', "\r\n", $string);
     }
 
     /**
